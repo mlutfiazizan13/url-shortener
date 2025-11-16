@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const urlRoutes = require('./routes/urlRoutes');
-app.use('/api', urlRoutes);
+app.use('/', urlRoutes);
 
 const PORT = process.env.APP_PORT || 3000;
 db.sequelize.sync()

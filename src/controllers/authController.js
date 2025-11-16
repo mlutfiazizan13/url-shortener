@@ -17,7 +17,7 @@ module.exports = {
             
             const token = jwt.generateToken({ userId: user.id, email: user.email });
 
-            res.json({ token });
+            res.status(200).json({ message: 'Login successful', token });
         } catch (error) {
             res.status(500).json({ message: 'Server error', error: error.message });
         }
